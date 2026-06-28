@@ -1,0 +1,20 @@
+body{
+    background:#f8f9fa;
+}
+
+.navbar-brand{
+    font-weight:bold;
+    font-size:28px;
+}
+
+h1{
+    color:#0f172a;
+}
+
+.lead{
+    color:#64748b;
+}
+
+.btn{
+    border-radius:10px;
+}
