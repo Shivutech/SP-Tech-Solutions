@@ -2,9 +2,9 @@ body{
     background:#f8f9fa;
 }
 
-.navbar-brand{
-    font-weight:bold;
-    font-size:28px;
+.navbar{
+    background:rgba(15,23,42,.9)!important;
+    backdrop-filter:blur(12px);
 }
 
 h1{
@@ -17,4 +17,58 @@ h1{
 
 .btn{
     border-radius:10px;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --primary:#2563eb;
+    --secondary:#0f172a;
+    --accent:#f59e0b;
+    --light:#f8fafc;
+    --dark:#020617;
+}
+
+body{
+    background:var(--light);
+    color:var(--secondary);
+    font-family:Arial, sans-serif;
+}
+
+section{
+    padding:90px 0;
+}
+.btn-primary{
+    background:var(--primary);
+    border:none;
+    border-radius:12px;
+    padding:12px 28px;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    transition:.3s;
+}
+.whatsapp-float{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    z-index: 9999;
+    transition: .3s;
+}
+
+.whatsapp-float:hover{
+    transform: scale(1.1);
+    color: white;
 }

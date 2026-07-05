@@ -1,0 +1,49 @@
+<section id="contact" class="py-5 bg-dark text-white">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Let's Work Together</h2>
+            <p>Tell us about your project and we'll get back to you.</p>
+        </div>
+
+        <form method="POST" action="{% url 'create_order' %}">
+    {% csrf_token %}
+
+    <div class="row">
+
+        <div class="col-md-6 mb-3">
+            {{ form.name }}
+        </div>
+
+        <div class="col-md-6 mb-3">
+            {{ form.email }}
+        </div>
+
+        <div class="col-md-6 mb-3">
+            {{ form.phone }}
+        </div>
+
+        <div class="col-md-6 mb-3">
+            {{ form.service }}
+        </div>
+
+        <div class="col-md-6 mb-3">
+            {{ form.budget }}
+        </div>
+
+        <div class="col-12 mb-3">
+            {{ form.message }}
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-warning btn-lg">
+                Send Request
+            </button>
+        </div>
+
+    </div>
+
+</form>
+
+    </div>
+</section>

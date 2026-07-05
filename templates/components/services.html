@@ -1,4 +1,4 @@
-<section class="py-5 bg-light">
+<section id="services" class="py-5 bg-light">
     <div class="container">
 
         <div class="text-center mb-5">
@@ -10,93 +10,53 @@
 
         <div class="row g-4">
 
-            <!-- Website Development -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="https://picsum.photos/400/250?random=1" class="card-img-top" alt="Website Development">
+    {% for service in services %}
 
-                    <div class="card-body">
-                        <h5 class="card-title">💻 Website Development</h5>
+    <div class="col-md-6 col-lg-4">
 
-                        <p class="card-text">
-                            Responsive and modern websites for businesses.
-                        </p>
+        <div class="card h-100 shadow-sm border-0">
 
-                        <p><strong>Starting:</strong> ₹4,999</p>
+            <img src="{{ service.image.url }}"
+                 class="card-img-top"
+                 alt="{{ service.title }}">
 
-                        <p><strong>Delivery:</strong> 5-7 Days</p>
+            <div class="card-body">
 
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-outline-primary btn-sm">
-                                View Portfolio
-                            </a>
+                <h5 class="card-title">{{ service.title }}</h5>
 
-                            <a href="#" class="btn btn-primary btn-sm">
-                                Get Quote
-                            </a>
-                        </div>
-                    </div>
+                <p class="card-text">
+                    {{ service.description|truncatewords:15 }}
+                </p>
+
+                <p><strong>Starting:</strong> ₹{{ service.starting_price }}</p>
+
+                <p><strong>Delivery:</strong> {{ service.delivery_time }}</p>
+
+                <div class="d-flex justify-content-between">
+                    <a href="#portfolio" class="btn btn-outline-primary btn-sm">
+                        View Portfolio
+                    </a>
+
+                    <a href="#contact" class="btn btn-primary btn-sm">
+                        Get Quote
+                    </a>
                 </div>
+
             </div>
 
-            <!-- Logo Design -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="https://picsum.photos/400/250?random=2" class="card-img-top" alt="Logo Design">
+        </div>
 
-                    <div class="card-body">
-                        <h5 class="card-title">🎨 Logo Design</h5>
+    </div>
 
-                        <p class="card-text">
-                            Unique and professional logo designs.
-                        </p>
+    {% empty %}
 
-                        <p><strong>Starting:</strong> ₹499</p>
+    <div class="col-12 text-center">
+        <h4>No Services Available</h4>
+    </div>
 
-                        <p><strong>Delivery:</strong> 2-3 Days</p>
+    {% endfor %}
 
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-outline-primary btn-sm">
-                                View Portfolio
-                            </a>
-
-                            <a href="#" class="btn btn-primary btn-sm">
-                                Get Quote
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Photo Editing -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="https://picsum.photos/400/250?random=3" class="card-img-top" alt="Photo Editing">
-
-                    <div class="card-body">
-                        <h5 class="card-title">🖼 Photo Editing</h5>
-
-                        <p class="card-text">
-                            Background removal, retouching and enhancements.
-                        </p>
-
-                        <p><strong>Starting:</strong> ₹299</p>
-
-                        <p><strong>Delivery:</strong> 1-2 Days</p>
-
-                        <div class="d-flex justify-content-between">
-                            <a href="#" class="btn btn-outline-primary btn-sm">
-                                View Portfolio
-                            </a>
-
-                            <a href="#" class="btn btn-primary btn-sm">
-                                Get Quote
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+</div>
         </div>
 
     </div>
