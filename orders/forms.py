@@ -10,7 +10,8 @@ class OrderForm(forms.ModelForm):
             'phone',
             'service',
             'budget',
-            'message'
+            'message',
+            'project_file',
         ]
 
         widgets = {
@@ -43,4 +44,9 @@ class OrderForm(forms.ModelForm):
                 'rows': 5,
                 'placeholder': 'Project Details'
             }),
+            
+            'project_file': forms.ClearableFileInput(attrs={
+                'class': 'form-control'
+            }),
         } 
+        

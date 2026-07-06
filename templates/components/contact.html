@@ -5,8 +5,18 @@
             <h2 class="fw-bold">Let's Work Together</h2>
             <p>Tell us about your project and we'll get back to you.</p>
         </div>
+        {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="alert"></button>
+        </div>
+    {% endfor %}
+{% endif %}
 
-        <form method="POST" action="{% url 'create_order' %}">
+        <form method="POST" action="{% url 'create_order' %}" enctype="multipart/form-data">
     {% csrf_token %}
 
     <div class="row">
@@ -33,6 +43,11 @@
 
         <div class="col-12 mb-3">
             {{ form.message }}
+        </div>
+
+        <div class="col-12 mb-3">
+    <label class="form-label">Upload Reference File (Optional)</label>
+    {{ form.project_file }}
         </div>
 
         <div class="text-center">

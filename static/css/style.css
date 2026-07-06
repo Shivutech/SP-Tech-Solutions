@@ -1,9 +1,10 @@
 body{
     background:#f8f9fa;
+    /* padding-top: 50px; */
 }
 
 .navbar{
-    background:rgba(15,23,42,.9)!important;
+    background:#0f172ae6!important;
     backdrop-filter:blur(12px);
 }
 
@@ -71,4 +72,54 @@ section{
 .whatsapp-float:hover{
     transform: scale(1.1);
     color: white;
+}
+.hero-section{
+    min-height:100vh;
+    background:linear-gradient(135deg,#f8fafc,#dbeafe);
+}
+
+.hero-section h1{
+    font-size:3.2rem;
+    line-height:1.2;
+}
+
+.hero-section img{
+    max-width:90%;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+.custom-navbar{
+    background: rgba(13, 110, 253, 0.95);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link{
+    color:#fff !important;
+    margin:0 8px;
+    font-weight:500;
+}
+
+.custom-navbar .nav-link:hover{
+    color:#ffd43b !important;
+}
+
+.navbar-brand{
+    font-size:1.5rem;
+    font-weight:700;
 }

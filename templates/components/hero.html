@@ -1,36 +1,65 @@
 {% load static %}
+<section id="home" class="hero-section d-flex align-items-center">
+    <div class="container">
+        <div class="row align-items-center">
 
-<section id="home" class="container py-5">
-    <div class="row align-items-center">
+            <div class="col-lg-6">
 
-        <div class="col-lg-6">
+                <span class="badge bg-warning text-dark mb-3">
+                    🚀 Trusted Digital Agency
+                </span>
 
-            <h1 class="display-4 fw-bold">
-                We Build Modern Digital Solutions
-            </h1>
+                <h1 class="display-4 fw-bold">
+                    Build Your Digital Presence with Professional Solutions
+                </h1>
 
-            <p class="lead mt-4">
-                Website Development, Logo Design, Photo Editing,
-                Video Editing and Branding Services.
-            </p>
+                <p class="lead text-muted mt-3">
+                    We provide Website Development, Logo Design,
+                    Photo Editing, Video Editing and complete Digital
+                    Solutions to help your business grow.
+                </p>
 
-            <a href="#" class="btn btn-primary btn-lg me-2">
-                Get Free Quote
-            </a>
+                <div class="mt-4">
 
-            <a href="#" class="btn btn-outline-dark btn-lg">
-                View Portfolio
-            </a>
+                    <a href="#contact" class="btn btn-primary btn-lg me-3">
+                        Get Free Quote
+                    </a>
+
+                    <a href="#portfolio" class="btn btn-outline-dark btn-lg">
+                        View Portfolio
+                    </a>
+
+                </div>
+
+                <div class="row mt-5">
+
+                    <div class="col-4 text-center">
+                        <h3 class="fw-bold text-primary">150+</h3>
+                        <small>Projects</small>
+                    </div>
+
+                    <div class="col-4 text-center">
+                        <h3 class="fw-bold text-primary">100+</h3>
+                        <small>Clients</small>
+                    </div>
+
+                    <div class="col-4 text-center">
+                        <h3 class="fw-bold text-primary">4.9★</h3>
+                        <small>Rating</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 text-center">
+
+                <img src="{% static 'images/hero.png' %}"
+                     class="img-fluid"
+                     alt="Hero Image">
+
+            </div>
 
         </div>
-
-        <div class="col-lg-6 text-center">
-
-            <img src="{% static 'images/images.jfif' %}"
-                 class="img-fluid"
-                 alt="Hero">
-
-        </div>
-
     </div>
 </section>

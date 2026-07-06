@@ -8,7 +8,10 @@ class OrderAdmin(admin.ModelAdmin):
         'service',
         'email',
         'phone',
+        'status',
         'created_at',
+        'project_file',
+        
     )
 
     list_filter = ('service', 'created_at')

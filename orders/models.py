@@ -20,5 +20,24 @@ class Order(models.Model):
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
+    project_file = models.FileField(
+        upload_to = 'orders/',
+        blank=True,
+        null=True
+    )
+
+    STATUS_CHOICES = [
+    ("Pending", "Pending"),
+    ("In Progress", "In Progress"),
+    ("Completed", "Completed"),
+    ("Delivered", "Delivered"),
+]
+
+    status = models.CharField(
+    max_length=20,
+    choices=STATUS_CHOICES,
+    default="Pending"
+)
+
     def __str__(self):
         return self.name
