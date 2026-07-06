@@ -1,0 +1,125 @@
+body{
+    background:#f8f9fa;
+    /* padding-top: 50px; */
+}
+
+.navbar{
+    background:#0f172ae6!important;
+    backdrop-filter:blur(12px);
+}
+
+h1{
+    color:#0f172a;
+}
+
+.lead{
+    color:#64748b;
+}
+
+.btn{
+    border-radius:10px;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --primary:#2563eb;
+    --secondary:#0f172a;
+    --accent:#f59e0b;
+    --light:#f8fafc;
+    --dark:#020617;
+}
+
+body{
+    background:var(--light);
+    color:var(--secondary);
+    font-family:Arial, sans-serif;
+}
+
+section{
+    padding:90px 0;
+}
+.btn-primary{
+    background:var(--primary);
+    border:none;
+    border-radius:12px;
+    padding:12px 28px;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    transition:.3s;
+}
+.whatsapp-float{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,.25);
+    z-index: 9999;
+    transition: .3s;
+}
+
+.whatsapp-float:hover{
+    transform: scale(1.1);
+    color: white;
+}
+.hero-section{
+    min-height:100vh;
+    background:linear-gradient(135deg,#f8fafc,#dbeafe);
+}
+
+.hero-section h1{
+    font-size:3.2rem;
+    line-height:1.2;
+}
+
+.hero-section img{
+    max-width:90%;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+.custom-navbar{
+    background: rgba(13, 110, 253, 0.95);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link{
+    color:#fff !important;
+    margin:0 8px;
+    font-weight:500;
+}
+
+.custom-navbar .nav-link:hover{
+    color:#ffd43b !important;
+}
+
+.navbar-brand{
+    font-size:1.5rem;
+    font-weight:700;
+}
